@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowDown, User } from 'lucide-react';
 import { lpContent } from '../data/lpContent';
 import { VideoPlaceholder } from './VideoPlaceholder';
+import profileImage from '../assets/profile.png';
 
 export const LPViewer: React.FC = () => {
   const c = lpContent;
@@ -215,7 +216,7 @@ export const LPViewer: React.FC = () => {
             {/* 講師画像プレースホルダー */}
             <div className="w-48 h-48 sm:w-56 sm:h-56 shrink-0 rounded-full border-4 border-black overflow-hidden shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] bg-gray-200 flex items-center justify-center">
               <img
-                src="/profile.png"
+                src={profileImage}
                 alt="講師プロフィール"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
