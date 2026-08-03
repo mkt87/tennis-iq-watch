@@ -1,0 +1,6 @@
+{
+  "name": "大人のテニスIQ戦略 動画プログラム LP",
+  "description": "PDF原稿に100%忠実なネオ・ブルータリズム（Pattern 8）デザインの「大人のテニスIQ戦略」動画視聴ランディングページ",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
