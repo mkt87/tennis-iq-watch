@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowDown, User } from 'lucide-react';
 import { lpContent } from '../data/lpContent';
 import { VideoPlaceholder } from './VideoPlaceholder';
-import profileImage from '../assets/profile.png';
+import profileImage from '../assets/profile.png.png';
 
 export const LPViewer: React.FC = () => {
   const c = lpContent;
