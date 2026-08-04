@@ -288,11 +288,18 @@ export const LPViewer: React.FC = () => {
             {c.matchVideosSection.title}
           </h2>
 
-          {/* 8個の動画プレースホルダー */}
+          {/* 8個の動画セクション（動画埋め込み対応） */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {Array.from({ length: c.matchVideosSection.count }).map((_, idx) => (
-              <VideoPlaceholder key={idx} />
-            ))}
+            {Array.from({ length: c.matchVideosSection.count }).map((_, idx) => {
+              const video = c.matchVideosSection.videos?.[idx];
+              return (
+                <VideoPlaceholder
+                  key={idx}
+                  embedUrl={video?.embedUrl}
+                  title={video?.title}
+                />
+              );
+            })}
           </div>
 
           {/* 最終CTAボタン */}

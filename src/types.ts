@@ -54,6 +54,10 @@ export interface LPData {
   matchVideosSection: {
     title: string;
     count: number;
+    videos?: {
+      embedUrl?: string;
+      title?: string;
+    }[];
   };
   ctaButtonText: string;
   bonusCtaButtonText: string;

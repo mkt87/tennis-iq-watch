@@ -173,7 +173,41 @@ export const lpContent: LPData = {
   },
   matchVideosSection: {
     title: 'テニスIQ戦略を使って勝利した実際の試合',
-    count: 8
+    count: 8,
+    videos: [
+      {
+        embedUrl: 'https://www.youtube.com/embed/hA1n7DRvBko?si=KN84F6K38U3fzTd8',
+        title: 'テニスIQ戦略を使って勝利した実際の試合 1'
+      },
+      {
+        embedUrl: 'https://www.youtube.com/embed/SB4WLEmNm-k',
+        title: 'テニスIQ戦略を使って勝利した実際の試合 2'
+      },
+      {
+        embedUrl: 'https://www.youtube.com/embed/Vib1KiWvjdQ',
+        title: 'テニスIQ戦略を使って勝利した実際の試合 3'
+      },
+      {
+        embedUrl: 'https://www.youtube.com/embed/l0dkKo5TKiw',
+        title: 'テニスIQ戦略を使って勝利した実際の試合 4'
+      },
+      {
+        embedUrl: 'https://www.youtube.com/embed/C9dvBNj5VVg',
+        title: 'テニスIQ戦略を使って勝利した実際の試合 5'
+      },
+      {
+        embedUrl: 'https://www.youtube.com/embed/sSxeM5aNnNY',
+        title: 'テニスIQ戦略を使って勝利した実際の試合 6'
+      },
+      {
+        embedUrl: 'https://www.youtube.com/embed/WO_aLqZql9c',
+        title: 'テニスIQ戦略を使って勝利した実際の試合 7'
+      },
+      {
+        embedUrl: 'https://www.youtube.com/embed/m6cxKIuYVjk',
+        title: 'テニスIQ戦略を使って勝利した実際の試合 8'
+      }
+    ]
   },
   ctaButtonText: '▶ 今すぐ【無料】個別戦略会議＆説明会に申し込む',
   bonusCtaButtonText: '4大特典の受け取りはこちら'

@@ -3,9 +3,30 @@ import { Play } from 'lucide-react';
 
 interface VideoPlaceholderProps {
   className?: string;
+  embedUrl?: string;
+  title?: string;
 }
 
-export const VideoPlaceholder: React.FC<VideoPlaceholderProps> = ({ className = '' }) => {
+export const VideoPlaceholder: React.FC<VideoPlaceholderProps> = ({
+  className = '',
+  embedUrl,
+  title = 'YouTube video player'
+}) => {
+  if (embedUrl) {
+    return (
+      <div className={`w-full relative aspect-video rounded-xl bg-black border-3 border-black overflow-hidden shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] ${className}`}>
+        <iframe
+          className="w-full h-full border-0"
+          src={embedUrl}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+    );
+  }
+
   return (
     <div className={`w-full relative aspect-video rounded-xl bg-yellow-100 border-3 border-black text-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center justify-center transition-all duration-300 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] ${className}`}>
       {/* Subtle halftone/dots background pattern */}
