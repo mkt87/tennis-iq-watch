@@ -1,4 +1,8 @@
 import { LPData } from '../types';
+import tokuten4Image from '../assets/tokuten4.png';
+import tokuten1Image from '../assets/tokuten1.png';
+import tokuten2Image from '../assets/tokuten2.png';
+import tokuten3Image from '../assets/tokuten3.png';
 
 export const lpContent: LPData = {
   hero: {
@@ -54,43 +58,51 @@ export const lpContent: LPData = {
     items: [
       {
         num: '1',
-        title: '初対戦の相手から“無意識のクセ”を読み取る！『情報収集術』',
+        title: '初対戦の相手から“無意識のクセ”を読み取る！\n『情報収集術』',
         description: [
           '初対戦の相手がどんなテニスをしてくるか分からない不安を払拭し。',
           'ですが、この「情報収集術」を使えば、試合前のアップだけで、',
           '相手の弱点や「困った時にどこに逃げるか」という無意識のクセを読み取ることができます。',
           'つまり、あなたは試合開始前から、プレーの面でも精神面でも相手をコントロールする側に立つことができるようになれます。'
-        ]
+        ],
+        image: tokuten1Image,
+        imageClassName: 'w-full h-auto md:w-auto md:h-[261px]'
       },
       {
         num: '2',
-        title: '【動画で解説】緊張の正体を知って試合に勝つメンタル攻略法',
+        title: '【動画で解説】緊張の正体を知って試合に勝つ\nメンタル攻略法',
         description: [
           'この動画は、試合になると緊張で腕が縮こまってミスをしてしまったり、普段の練習通りプレーができないといった「チキり」やパニックを根絶させるための動画になっています。',
           '緊張のメカニズムを科学的に知ることで、あなたはもうプレッシャーのかかる大事なポイントでも頭が真っ白になることなく、練習通りにポイントを取り切ることができるようになります。'
-        ]
+        ],
+        image: tokuten2Image,
+        imageClassName: 'w-full h-auto md:w-auto md:h-[261px]'
       },
       {
         num: '3',
-        title: '【コピペでOK】あなた専用の『戦略』をAIが自動作成！秘密のAI指示書',
+        title: '【コピペでOK】あなた専用の『戦略』をAIが自動作成！\n秘密のAI指示書',
         description: [
           'この動画の中で解説した「大人のカンニングペーパー」を、あなた自身でも簡単に作れる魔法のツールです。',
           'あなたの「得意なショット」や「苦手なショット」をchatGPTやGeminiといったAIに入力するだけで、今の技術のまま勝率を跳ね上げる具体的な配球パターンをAIが瞬時に弾き出してくれます。',
           'これまでAIを使っても試合に勝てていなかった方は、ぜひ、ここに書かれている指示書をAIに送ってください。'
-        ]
+        ],
+        image: tokuten3Image,
+        imageClassName: 'w-full h-auto md:w-auto md:h-[261px]'
       },
       {
         num: '4',
-        title: '【迷いが消える】ダブルスで勝つための『試合前3分チェックリスト』',
+        title: '【迷いが消える】ダブルスで勝つための\n『試合前3分チェックリスト』',
         description: [
           'このチェックリストがあれば「なかなかポーチに出られない」「センターをお見合いしてしまう」「スマッシュが苦手」といった、ダブルスでよくある悩みを一気に解消することができます。'
-        ]
+        ],
+        image: tokuten4Image,
+        imageClassName: 'w-full h-auto max-w-[80%] md:max-w-[70%]'
       }
     ],
     closingText: '他では絶対に手に入らない非売品の4大特典を受け取るためにも、まずはお気軽にお申し込みください。'
   },
   applicationMethodSection: {
-    title: '【無料】個別戦略会議＆説明会のお申し込み方法',
+    title: '【無料】個別作戦会議＆説明会の\nお申し込み方法',
     steps: [
       {
         step: 'STEP1',

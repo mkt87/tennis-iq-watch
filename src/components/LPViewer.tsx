@@ -129,9 +129,14 @@ export const LPViewer: React.FC = () => {
           <div className="space-y-6">
             {c.bonusesSection.items.map((bonus, idx) => (
               <div key={idx} className="p-6 md:p-8 rounded-2xl bg-white border-3 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] space-y-4">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-black leading-snug border-b-3 border-black pb-3 text-black">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-black leading-snug border-b-3 border-black pb-3 text-black whitespace-pre-wrap">
                   {bonus.title}
                 </h3>
+                {bonus.image && (
+                  <div className={`mt-4 mb-4 flex justify-center`}>
+                    <img src={bonus.image} alt={bonus.title} className={`object-contain ${bonus.imageClassName || 'w-full h-auto max-w-[40%] md:max-w-[35%]'}`} style={bonus.imageStyle} referrerPolicy="no-referrer" />
+                  </div>
+                )}
                 <div className="space-y-3 text-base sm:text-lg font-bold leading-relaxed text-gray-900 pt-2">
                   {bonus.description.map((line, lIdx) => (
                     <p key={lIdx}>{line}</p>
@@ -158,7 +163,7 @@ export const LPViewer: React.FC = () => {
 
         {/* 申し込みステップセクション */}
         <section id="apply" className="p-6 md:p-10 rounded-2xl bg-white border-3 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] space-y-8 scroll-mt-20">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-center border-b-3 border-black pb-5">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-center border-b-3 border-black pb-5 whitespace-pre-wrap leading-relaxed">
             {c.applicationMethodSection.title}
           </h2>
 

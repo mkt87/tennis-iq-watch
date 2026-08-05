@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface LPData {
   hero: {
     badges: string[];
@@ -23,6 +25,9 @@ export interface LPData {
       num: string;
       title: string;
       description: string[];
+      image?: string;
+      imageClassName?: string;
+      imageStyle?: React.CSSProperties;
     }[];
     closingText: string;
   };
