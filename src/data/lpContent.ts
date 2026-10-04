@@ -1,5 +1,7 @@
 import { LPData } from '../types';
 import tokuten1Image from '../assets/tokuten1.png';
+import tokuten2Image from '../assets/tokuten2.png';
+import tokuten3Image from '../assets/tokuten3.png';
 import maImage from '../assets/MA.jpeg';
 import fuImage from '../assets/FU.jpeg';
 import profileImage from '../assets/profile.png';
@@ -75,8 +77,8 @@ export const lpContent: LPData = {
           'この動画は、試合になると緊張で腕が縮こまってミスをしてしまったり、普段の練習通りプレーができないといった「チキり」やパニックを根絶させるための動画になっています。',
           '緊張のメカニズムを科学的に知ることで、あなたはもうプレッシャーのかかる大事なポイントでも頭が真っ白になることなく、練習通りにポイントを取り切ることができるようになります。'
         ],
-        image: 'https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=800&q=80',
-        imageClassName: 'w-full h-auto md:w-auto md:h-[261px] object-cover rounded-xl border-2 border-black'
+        image: tokuten2Image,
+        imageClassName: 'w-full h-auto md:w-auto md:h-[261px]'
       },
       {
         num: '3',
@@ -86,8 +88,8 @@ export const lpContent: LPData = {
           'あなたの「得意なショット」や「苦手なショット」をchatGPTやGeminiといったAIに入力するだけで、今の技術のまま勝率を跳ね上げる具体的な配球パターンをAIが瞬時に弾き出してくれます。',
           'これまでAIを使っても試合に勝てていなかった方は、ぜひ、ここに書かれている指示書をAIに送ってください。'
         ],
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
-        imageClassName: 'w-full h-auto md:w-auto md:h-[261px] object-cover rounded-xl border-2 border-black'
+        image: tokuten3Image,
+        imageClassName: 'w-full h-auto md:w-auto md:h-[261px]'
       },
       {
         num: '4',
