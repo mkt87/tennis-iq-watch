@@ -2,6 +2,7 @@ import { LPData } from '../types';
 import tokuten1Image from '../assets/tokuten1.png';
 import tokuten2Image from '../assets/tokuten2.png';
 import tokuten3Image from '../assets/tokuten3.png';
+import tokuten4Image from '../assets/tokuten4.png';
 import maImage from '../assets/MA.jpeg';
 import fuImage from '../assets/FU.jpeg';
 import profileImage from '../assets/profile.png';
@@ -97,8 +98,8 @@ export const lpContent: LPData = {
         description: [
           'このチェックリストがあれば「なかなかポーチに出られない」「センターをお見合いしてしまう」「スマッシュが苦手」といった、ダブルスでよくある悩みを一気に解消することができます。'
         ],
-        image: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=800&q=80',
-        imageClassName: 'w-full h-auto max-w-[80%] md:max-w-[70%] object-cover rounded-xl border-2 border-black'
+        image: tokuten4Image,
+        imageClassName: 'w-full h-auto md:w-auto md:h-[261px]'
       }
     ],
     closingText: '他では絶対に手に入らない非売品の4大特典を受け取るためにも、まずはお気軽にお申し込みください。'
