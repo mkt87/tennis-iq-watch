@@ -1,6 +1,7 @@
 import { LPData } from '../types';
 import maImage from '../assets/MA.jpeg';
 import fuImage from '../assets/FU.jpeg';
+import profileImage from '../assets/profile.png';
 
 export const lpContent: LPData = {
   hero: {
@@ -167,7 +168,7 @@ export const lpContent: LPData = {
     title: '講師プロフィール',
     name: '長谷川 誠（48歳）',
     subName: '軟式上がり・片手バックハンド・社会人になってからは「週1練習」の、どこにでもいる普通のおじさんプレーヤー。',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
+    image: profileImage,
     bioParagraphs: [
       '中学から軟式テニスを始めるも、3年間で一度も県大会に出場することなく引退。',
       '高校からは硬式テニスに転向。',
