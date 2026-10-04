@@ -2,10 +2,19 @@ import React from 'react';
 import { ArrowDown, User } from 'lucide-react';
 import { lpContent } from '../data/lpContent';
 import { VideoPlaceholder } from './VideoPlaceholder';
-import profileImage from '../assets/profile.png.png';
+import { LineAddFriendBanner } from './LineAddFriendBanner';
 
 export const LPViewer: React.FC = () => {
   const c = lpContent;
+
+  const scrollToApply = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const target = document.getElementById('apply');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.history.pushState(null, '', '#apply');
+    }
+  };
 
   return (
     <div className="w-full min-h-screen bg-[#F6F3EB] text-black font-sans selection:bg-yellow-300 selection:text-black">
@@ -72,7 +81,8 @@ export const LPViewer: React.FC = () => {
           <div className="pt-2">
             <a
               href="#apply"
-              className="inline-block w-full text-center py-5 px-6 md:px-8 text-lg sm:text-xl md:text-2xl font-black rounded-2xl bg-[#FF5500] hover:bg-[#E04B00] text-white border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-150"
+              onClick={scrollToApply}
+              className="inline-block w-full text-center py-5 px-6 md:px-8 text-lg sm:text-xl md:text-2xl font-black rounded-2xl bg-[#FF5500] hover:bg-[#E04B00] text-white border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-150 cursor-pointer"
             >
               {c.ctaButtonText}
             </a>
@@ -153,8 +163,10 @@ export const LPViewer: React.FC = () => {
           {/* 特典CTAボタン (オレンジ色) */}
           <div>
             <a
-              href="#apply"
-              className="inline-block w-full text-center py-5 px-6 text-lg sm:text-xl font-black rounded-2xl bg-[#FF5500] hover:bg-[#E04B00] text-white border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-150"
+              href="https://tennis-iq-present.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-full text-center py-5 px-6 text-lg sm:text-xl font-black rounded-2xl bg-[#FF5500] hover:bg-[#E04B00] text-white border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-150 cursor-pointer"
             >
               {c.bonusCtaButtonText}
             </a>
@@ -169,20 +181,58 @@ export const LPViewer: React.FC = () => {
 
           <div className="space-y-5">
             {c.applicationMethodSection.steps.map((st, idx) => (
-              <div key={idx} className="p-5 rounded-xl bg-yellow-100/90 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col gap-1.5">
-                <span className="text-sm font-black uppercase tracking-wider bg-black text-yellow-300 w-max px-3 py-0.5 rounded border border-black">
-                  {st.step}
-                </span>
-                <p className="text-lg sm:text-xl font-black text-black">
-                  {st.title}
-                </p>
-                {st.detail && (
-                  <p className="text-sm sm:text-base font-bold text-gray-800 pt-1">
-                    {st.detail}
+              <div
+                key={idx}
+                className="p-5 sm:p-6 rounded-xl bg-yellow-100/90 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col sm:flex-row gap-4 sm:gap-6 items-start sm:items-center"
+              >
+                <div className="flex-1 flex flex-col gap-2 w-full order-1">
+                  <span className="text-sm font-black uppercase tracking-wider bg-black text-yellow-300 w-max px-3 py-0.5 rounded border border-black">
+                    {st.step}
+                  </span>
+                  <p className="text-lg sm:text-xl font-black text-black whitespace-pre-wrap leading-snug">
+                    {st.title}
                   </p>
+                  {st.detail && (
+                    <p className="text-sm sm:text-base font-bold text-gray-800 pt-0.5 whitespace-pre-wrap">
+                      {st.detail}
+                    </p>
+                  )}
+                </div>
+
+                {st.image && (
+                  <div className="w-full max-w-[280px] sm:max-w-none sm:w-44 md:w-52 lg:w-56 flex-shrink-0 order-2 self-center sm:self-auto">
+                    <div className="overflow-hidden rounded-lg border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] bg-white aspect-[4/3]">
+                      <img
+                        src={st.image}
+                        alt={st.imageAlt || `${st.step}のイメージ`}
+                        className="w-full h-full object-cover"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  </div>
                 )}
               </div>
             ))}
+
+            {/* ステップの下：バナー誘導矢印 ＆ バナー */}
+            <div className="space-y-2 sm:space-y-3 pt-1">
+              <div className="flex justify-center">
+                <svg
+                  viewBox="0 0 120 40"
+                  className="w-20 sm:w-28 h-auto text-[#FF5500] animate-bounce drop-shadow-[3px_3px_0px_rgba(0,0,0,1)]"
+                  aria-hidden="true"
+                >
+                  <polygon
+                    points="10,5 110,5 60,35"
+                    fill="currentColor"
+                    stroke="black"
+                    strokeWidth="4"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <LineAddFriendBanner url={c.ctaUrl} />
+            </div>
           </div>
         </section>
 
@@ -192,10 +242,51 @@ export const LPViewer: React.FC = () => {
             {c.testimonialsSection.title}
           </h2>
 
-          <div className="space-y-4">
+          <div className="space-y-6">
             {c.testimonialsSection.items.map((item, idx) => (
-              <div key={idx} className="p-5 rounded-xl bg-gray-100 border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] font-extrabold text-base sm:text-lg">
-                {item}
+              <div key={idx} className="relative p-6 sm:p-8 rounded-2xl bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
+                <div className="absolute top-2 right-4 text-7xl md:text-8xl font-serif text-gray-200 leading-none pointer-events-none select-none">
+                  ”
+                </div>
+                
+                <h3 className="relative z-10 text-xl sm:text-2xl font-black text-[#FF5500] mb-8 pr-12 leading-snug">
+                  {item.title}
+                </h3>
+                
+                <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start relative z-10">
+                  {item.image && (
+                    <div className="w-40 h-40 sm:w-48 sm:h-48 shrink-0 rounded-full border-4 border-black overflow-hidden shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] bg-gray-200 flex items-center justify-center">
+                      <img
+                        src={item.image}
+                        alt={`${item.author}様の声`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
+                  <div className="space-y-4 flex-grow mt-2 md:mt-0">
+                    {item.content.slice(0, 2).map((paragraph, pIdx) => (
+                      <p key={pIdx} className="font-bold text-gray-800 text-sm sm:text-base leading-relaxed">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+
+                {item.content.length > 2 && (
+                  <div className="space-y-4 mt-6 relative z-10">
+                    {item.content.slice(2).map((paragraph, pIdx) => (
+                      <p key={pIdx} className="font-bold text-gray-800 text-sm sm:text-base leading-relaxed">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                )}
+                
+                <div className="mt-8 pt-4 border-t border-gray-200 text-right relative z-10">
+                  <span className="font-black text-black text-sm sm:text-base tracking-widest">
+                    {item.author}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
@@ -204,7 +295,8 @@ export const LPViewer: React.FC = () => {
           <div className="pt-4">
             <a
               href="#apply"
-              className="inline-block w-full text-center py-5 px-6 text-lg sm:text-xl font-black rounded-2xl bg-[#FF5500] hover:bg-[#E04B00] text-white border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-150"
+              onClick={scrollToApply}
+              className="inline-block w-full text-center py-5 px-6 text-lg sm:text-xl font-black rounded-2xl bg-[#FF5500] hover:bg-[#E04B00] text-white border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-150 cursor-pointer"
             >
               {c.ctaButtonText}
             </a>
@@ -220,12 +312,16 @@ export const LPViewer: React.FC = () => {
           <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
             {/* 講師画像プレースホルダー */}
             <div className="w-48 h-48 sm:w-56 sm:h-56 shrink-0 rounded-full border-4 border-black overflow-hidden shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] bg-gray-200 flex items-center justify-center">
-              <img
-                src={profileImage}
-                alt="講師プロフィール"
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-              />
+              {c.instructorSection.image ? (
+                <img
+                  src={c.instructorSection.image}
+                  alt={c.instructorSection.name || '講師プロフィール'}
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              ) : (
+                <User className="w-24 h-24 text-gray-400" />
+              )}
             </div>
 
             <div className="space-y-6 flex-1 w-full">
@@ -311,7 +407,8 @@ export const LPViewer: React.FC = () => {
           <div className="pt-6">
             <a
               href="#apply"
-              className="inline-block w-full text-center py-6 px-8 text-xl sm:text-2xl font-black rounded-2xl bg-[#FF5500] hover:bg-[#E04B00] text-white border-3 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] transition-all duration-150"
+              onClick={scrollToApply}
+              className="inline-block w-full text-center py-6 px-8 text-xl sm:text-2xl font-black rounded-2xl bg-[#FF5500] hover:bg-[#E04B00] text-white border-3 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] transition-all duration-150 cursor-pointer"
             >
               {c.ctaButtonText}
             </a>

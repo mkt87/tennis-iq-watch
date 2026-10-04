@@ -1,8 +1,4 @@
 import { LPData } from '../types';
-import tokuten4Image from '../assets/tokuten4.png';
-import tokuten1Image from '../assets/tokuten1.png';
-import tokuten2Image from '../assets/tokuten2.png';
-import tokuten3Image from '../assets/tokuten3.png';
 
 export const lpContent: LPData = {
   hero: {
@@ -65,8 +61,8 @@ export const lpContent: LPData = {
           '相手の弱点や「困った時にどこに逃げるか」という無意識のクセを読み取ることができます。',
           'つまり、あなたは試合開始前から、プレーの面でも精神面でも相手をコントロールする側に立つことができるようになれます。'
         ],
-        image: tokuten1Image,
-        imageClassName: 'w-full h-auto md:w-auto md:h-[261px]'
+        image: 'https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=800&q=80',
+        imageClassName: 'w-full h-auto md:w-auto md:h-[261px] object-cover rounded-xl border-2 border-black'
       },
       {
         num: '2',
@@ -75,8 +71,8 @@ export const lpContent: LPData = {
           'この動画は、試合になると緊張で腕が縮こまってミスをしてしまったり、普段の練習通りプレーができないといった「チキり」やパニックを根絶させるための動画になっています。',
           '緊張のメカニズムを科学的に知ることで、あなたはもうプレッシャーのかかる大事なポイントでも頭が真っ白になることなく、練習通りにポイントを取り切ることができるようになります。'
         ],
-        image: tokuten2Image,
-        imageClassName: 'w-full h-auto md:w-auto md:h-[261px]'
+        image: 'https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=800&q=80',
+        imageClassName: 'w-full h-auto md:w-auto md:h-[261px] object-cover rounded-xl border-2 border-black'
       },
       {
         num: '3',
@@ -86,8 +82,8 @@ export const lpContent: LPData = {
           'あなたの「得意なショット」や「苦手なショット」をchatGPTやGeminiといったAIに入力するだけで、今の技術のまま勝率を跳ね上げる具体的な配球パターンをAIが瞬時に弾き出してくれます。',
           'これまでAIを使っても試合に勝てていなかった方は、ぜひ、ここに書かれている指示書をAIに送ってください。'
         ],
-        image: tokuten3Image,
-        imageClassName: 'w-full h-auto md:w-auto md:h-[261px]'
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+        imageClassName: 'w-full h-auto md:w-auto md:h-[261px] object-cover rounded-xl border-2 border-black'
       },
       {
         num: '4',
@@ -95,8 +91,8 @@ export const lpContent: LPData = {
         description: [
           'このチェックリストがあれば「なかなかポーチに出られない」「センターをお見合いしてしまう」「スマッシュが苦手」といった、ダブルスでよくある悩みを一気に解消することができます。'
         ],
-        image: tokuten4Image,
-        imageClassName: 'w-full h-auto max-w-[80%] md:max-w-[70%]'
+        image: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=800&q=80',
+        imageClassName: 'w-full h-auto max-w-[80%] md:max-w-[70%] object-cover rounded-xl border-2 border-black'
       }
     ],
     closingText: '他では絶対に手に入らない非売品の4大特典を受け取るためにも、まずはお気軽にお申し込みください。'
@@ -106,33 +102,70 @@ export const lpContent: LPData = {
     steps: [
       {
         step: 'STEP1',
-        title: '以下のLINEに登録'
+        title: '専用LINEに友だち追加',
+        detail: '（※すでに登録済みの方はそのままLINEを開いてください）',
+        image: 'https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=800&q=80',
+        imageAlt: '専用LINEに友だち追加のイメージ'
       },
       {
         step: 'STEP2',
-        title: 'LINEで日程調整を行う'
+        title: 'LINEで「個別戦略」とだけ入力して送信',
+        image: 'https://images.unsplash.com/photo-1586769852044-692d6e3703f0?auto=format&fit=crop&w=800&q=80',
+        imageAlt: 'LINEで個別戦略と送信するイメージ'
       },
       {
         step: 'STEP3',
-        title: '【無料】個別戦略会議＆説明会開催',
-        detail: '（Google Meetでの開催となりますので、送られたURLをクリックするだけです※アプリのダウンロードなどは一切不要）'
+        title: '私からLINEに直接ご返信\nそこで日程調整を行いましょう！',
+        image: 'https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&w=800&q=80',
+        imageAlt: 'LINEでの日程調整のイメージ'
+      },
+      {
+        step: 'STEP4',
+        title: '日程が確定しましたら専用URLのお渡し。',
+        detail: '「Google Meet」でのオンライン開催となりますので、アプリ等のダウンロードは一切不要。\n（URLをクリックするだけ）',
+        image: 'https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&w=800&q=80',
+        imageAlt: '専用URL（Google Meet）お渡しのイメージ'
+      },
+      {
+        step: 'STEP5',
+        title: '当日、時間になりましたらURLをクリックして作戦会議スタート！',
+        image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
+        imageAlt: 'Google Meetでのオンライン作戦会議スタート（個別相談）'
       }
     ]
   },
   testimonialsSection: {
     title: 'お客様の声',
     items: [
-      'お客様の声1',
-      'お客様の声2',
-      'お客様の声3',
-      'お客様の声4',
-      'お客様の声5'
+      {
+        title: '『勝つための戦略』でショットの使い所が分かるようになりました！',
+        content: [
+          '普段通っているテニススクールでは、自分が克服したいメニューをガッツリと練習できないことに物足りなさを感じていました。',
+          'そこで、ご自身も現役で試合に出場し、結果を出している長谷川さんなら「試合で勝つための具体的な戦略」を教えてもらえると思い参加を決めました。',
+          '実際にアドバイスを受けてみて、ただボールを綺麗に打つ練習ではなく、「この場面ではどう配球するか」というショットの使い所が明確にわかるようになってきました。',
+          '漠然とスクールに通うのではなく、「試合に勝ちたい」という明確な目的を持っている人には、間違いなくオススメしたいです！'
+        ],
+        author: 'M・A様　女性',
+        image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        title: 'スクールのコーチに『そんなの教えてないよ！』と驚かれる、実戦で使えるパターンを習いました！',
+        content: [
+          'ずっとフォアのストロークに悩んでいて、ダブルスの試合でもペアに任せっきりになってしまう状態からなんとか変わりたいと思っていました。',
+          '長谷川さんから学んで一番大きかったのは、通常のレッスンではなかなか聞くことができない「試合の中での具体的な動き方」を教えてもらえたことです。',
+          '教わったことを実際の試合でどんどんトライするようになるとプレーの幅が広がり、スクールのコーチからも「そんなパターン、レッスンでは教えていないよ！」と驚かれるくらい、実戦で使える戦術を身につけることができました。',
+          '試合に出始めたばかりで、「どうやったら勝てるのか（勝ち方）」がまだ分からないという人には、本当にオススメです。'
+        ],
+        author: 'F・U様　女性',
+        image: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=600&q=80'
+      }
     ]
   },
   instructorSection: {
     title: '講師プロフィール',
     name: '長谷川 誠（48歳）',
     subName: '軟式上がり・片手バックハンド・社会人になってからは「週1練習」の、どこにでもいる普通のおじさんプレーヤー。',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
     bioParagraphs: [
       '中学から軟式テニスを始めるも、3年間で一度も県大会に出場することなく引退。',
       '高校からは硬式テニスに転向。',
@@ -222,5 +255,6 @@ export const lpContent: LPData = {
     ]
   },
   ctaButtonText: '▶ 今すぐ【無料】個別戦略会議＆説明会に申し込む',
-  bonusCtaButtonText: '4大特典の受け取りはこちら'
+  bonusCtaButtonText: '4大特典の受け取りはこちら',
+  ctaUrl: 'https://tennis-iq-present.vercel.app/'
 };

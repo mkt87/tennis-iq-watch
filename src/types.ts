@@ -37,16 +37,24 @@ export interface LPData {
       step: string;
       title: string;
       detail?: string;
+      image?: string;
+      imageAlt?: string;
     }[];
   };
   testimonialsSection: {
     title: string;
-    items: string[];
+    items: {
+      title: string;
+      content: string[];
+      author: string;
+      image?: string;
+    }[];
   };
   instructorSection: {
     title: string;
     name: string;
     subName: string;
+    image?: string;
     bioParagraphs: string[];
     targetAudienceIntro: string;
     targetAudiencePoints: string[];
@@ -66,4 +74,5 @@ export interface LPData {
   };
   ctaButtonText: string;
   bonusCtaButtonText: string;
+  ctaUrl?: string;
 }
