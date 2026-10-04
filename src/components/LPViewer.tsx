@@ -254,13 +254,20 @@ export const LPViewer: React.FC = () => {
                 </h3>
                 
                 <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start relative z-10">
-                  {item.image && (
+                  {item.image ? (
                     <div className="w-40 h-40 sm:w-48 sm:h-48 shrink-0 rounded-full border-4 border-black overflow-hidden shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] bg-gray-200 flex items-center justify-center">
                       <img
                         src={item.image}
                         alt={`${item.author}様の声`}
                         className="w-full h-full object-cover"
                       />
+                    </div>
+                  ) : (
+                    <div className="w-40 h-40 sm:w-48 sm:h-48 shrink-0 rounded-full border-4 border-black overflow-hidden shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] bg-amber-50 flex flex-col items-center justify-center text-gray-400">
+                      <svg className="w-16 h-16 sm:w-20 sm:h-20 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                      </svg>
+                      <span className="text-xs font-bold text-gray-400 mt-1">写真準備中</span>
                     </div>
                   )}
                   <div className="space-y-4 flex-grow mt-2 md:mt-0">
