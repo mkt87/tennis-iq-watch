@@ -1,4 +1,5 @@
 import { LPData } from '../types';
+import tokuten1Image from '../assets/tokuten1.png';
 import maImage from '../assets/MA.jpeg';
 import fuImage from '../assets/FU.jpeg';
 import profileImage from '../assets/profile.png';
@@ -64,8 +65,8 @@ export const lpContent: LPData = {
           '相手の弱点や「困った時にどこに逃げるか」という無意識のクセを読み取ることができます。',
           'つまり、あなたは試合開始前から、プレーの面でも精神面でも相手をコントロールする側に立つことができるようになれます。'
         ],
-        image: 'https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=800&q=80',
-        imageClassName: 'w-full h-auto md:w-auto md:h-[261px] object-cover rounded-xl border-2 border-black'
+        image: tokuten1Image,
+        imageClassName: 'w-full h-auto md:w-auto md:h-[261px]'
       },
       {
         num: '2',
