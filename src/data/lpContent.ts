@@ -1,4 +1,5 @@
 import { LPData } from '../types';
+import maImage from '../assets/MA.jpeg';
 
 export const lpContent: LPData = {
   hero: {
@@ -146,7 +147,7 @@ export const lpContent: LPData = {
           '漠然とスクールに通うのではなく、「試合に勝ちたい」という明確な目的を持っている人には、間違いなくオススメしたいです！'
         ],
         author: 'M・A様　女性',
-        image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80'
+        image: maImage
       },
       {
         title: 'スクールのコーチに『そんなの教えてないよ！』と驚かれる、実戦で使えるパターンを習いました！',
