@@ -1,5 +1,6 @@
 import { LPData } from '../types';
 import maImage from '../assets/MA.jpeg';
+import fuImage from '../assets/FU.jpeg';
 
 export const lpContent: LPData = {
   hero: {
@@ -158,7 +159,7 @@ export const lpContent: LPData = {
           '試合に出始めたばかりで、「どうやったら勝てるのか（勝ち方）」がまだ分からないという人には、本当にオススメです。'
         ],
         author: 'F・U様　女性',
-        image: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=600&q=80'
+        image: fuImage
       }
     ]
   },
