@@ -3,6 +3,7 @@ import tokuten1Image from '../assets/tokuten1.png';
 import tokuten2Image from '../assets/tokuten2.png';
 import tokuten3Image from '../assets/tokuten3.png';
 import tokuten4Image from '../assets/tokuten4.png';
+import imImage from '../assets/IM.png';
 import maImage from '../assets/MA.jpeg';
 import fuImage from '../assets/FU.jpeg';
 import profileImage from '../assets/profile.png';
@@ -145,7 +146,7 @@ export const lpContent: LPData = {
     title: 'お客様の声',
     items: [
       {
-        title: '「ブランクと体力不足で自信喪失…。しかし『予測の力』で動き出しが早くなり、自信を取り戻せました！」',
+        title: '「学生時代に習った常識を覆す戦術を教わり、テニスが一変しました」',
         content: [
           '6年のブランクと体力不足で、少し動かされるだけでミスを連発し、すっかり自信を失っていました。YouTubeのレッスン動画を見ても「実際の試合でいつ使うか」が判断できず、コートでは全く実践できませんでした。',
           'しかし、長谷川さんから「相手の配球を予測する戦略」や、「わざと短く打って有利に展開する」という学生時代に習った常識を覆す戦術を教わり、テニスが一変しました。',
@@ -154,7 +155,7 @@ export const lpContent: LPData = {
           '試合でなかなか勝てず、壁を感じている方には本当にオススメです！'
         ],
         author: 'I・M様　40代男性',
-        image: ''
+        image: imImage
       },
       {
         title: '『勝つための戦略』でショットの使い所が分かるようになりました！',
