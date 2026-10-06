@@ -7,6 +7,10 @@ import imImage from '../assets/IM.png';
 import maImage from '../assets/MA.jpeg';
 import fuImage from '../assets/FU.jpeg';
 import profileImage from '../assets/profile.png';
+import step2Image from '../assets/STEP2.jpeg';
+import step3Image from '../assets/STEP3.png';
+import step4Image from '../assets/STEP4.png';
+import step5Image from '../assets/STEP5.png';
 
 export const lpContent: LPData = {
   hero: {
@@ -118,26 +122,26 @@ export const lpContent: LPData = {
       {
         step: 'STEP2',
         title: 'LINEで「個別戦略」とだけ入力して送信',
-        image: 'https://images.unsplash.com/photo-1586769852044-692d6e3703f0?auto=format&fit=crop&w=800&q=80',
+        image: step2Image,
         imageAlt: 'LINEで個別戦略と送信するイメージ'
       },
       {
         step: 'STEP3',
         title: '私からLINEに直接ご返信\nそこで日程調整を行いましょう！',
-        image: 'https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&w=800&q=80',
+        image: step3Image,
         imageAlt: 'LINEでの日程調整のイメージ'
       },
       {
         step: 'STEP4',
         title: '日程が確定しましたら専用URLのお渡し。',
         detail: '「Google Meet」でのオンライン開催となりますので、アプリ等のダウンロードは一切不要。\n（URLをクリックするだけ）',
-        image: 'https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&w=800&q=80',
+        image: step4Image,
         imageAlt: '専用URL（Google Meet）お渡しのイメージ'
       },
       {
         step: 'STEP5',
         title: '当日、時間になりましたらURLをクリックして作戦会議スタート！',
-        image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
+        image: step5Image,
         imageAlt: 'Google Meetでのオンライン作戦会議スタート（個別相談）'
       }
     ]
