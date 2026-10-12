@@ -112,11 +112,24 @@ export const LPViewer: React.FC = () => {
                   {sc.title}
                 </h3>
                 <ul className="space-y-2.5 text-sm sm:text-base font-extrabold text-gray-900">
-                  {sc.points.map((pt, pIdx) => (
-                    <li key={pIdx} className="flex items-start gap-2">
-                      <span>{pt}</span>
-                    </li>
-                  ))}
+                  {sc.points.map((pt, pIdx) => {
+                    const hasCheck = pt.startsWith('✔') || pt.startsWith('✔️');
+                    const text = hasCheck ? pt.replace(/^[✔✔️]\s*/, '') : pt;
+                    return (
+                      <li key={pIdx} className="flex items-start gap-2">
+                        {hasCheck ? (
+                          <>
+                            <span className="text-red-600 font-black shrink-0 text-base sm:text-lg leading-tight select-none">
+                              ✔&#xFE0E;
+                            </span>
+                            <span className="flex-1">{text}</span>
+                          </>
+                        ) : (
+                          <span>{pt}</span>
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}
