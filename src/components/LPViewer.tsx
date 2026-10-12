@@ -156,20 +156,25 @@ export const LPViewer: React.FC = () => {
             ))}
           </div>
 
-          <p className="text-left text-base sm:text-lg font-black py-2">
+          <p className="text-left text-base sm:text-lg font-black py-2 whitespace-pre-wrap leading-relaxed">
             {c.bonusesSection.closingText}
           </p>
 
-          {/* 特典CTAボタン (オレンジ色) */}
-          <div>
-            <a
-              href="https://tennis-iq-present.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block w-full text-center py-5 px-6 text-lg sm:text-xl font-black rounded-2xl bg-[#FF5500] hover:bg-[#E04B00] text-white border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-150 cursor-pointer"
+          {/* 矢印 (申し込みステップへの誘導) */}
+          <div className="flex justify-center pt-3 pb-1">
+            <svg
+              viewBox="0 0 60 70"
+              className="w-12 sm:w-14 h-auto text-red-600 animate-bounce drop-shadow-[3px_3px_0px_rgba(0,0,0,1)]"
+              aria-hidden="true"
             >
-              {c.bonusCtaButtonText}
-            </a>
+              <path
+                d="M22 4 L38 4 L38 36 L54 36 L30 66 L6 36 L22 36 Z"
+                fill="currentColor"
+                stroke="black"
+                strokeWidth="4"
+                strokeLinejoin="round"
+              />
+            </svg>
           </div>
         </section>
 
@@ -192,6 +197,11 @@ export const LPViewer: React.FC = () => {
                   <p className="text-lg sm:text-xl font-black text-black whitespace-pre-wrap leading-snug">
                     {st.title}
                   </p>
+                  {st.highlightText && (
+                    <p className="text-sm sm:text-base font-bold text-red-600 whitespace-pre-wrap">
+                      {st.highlightText}
+                    </p>
+                  )}
                   {st.detail && (
                     <p className="text-sm sm:text-base font-bold text-gray-800 pt-0.5 whitespace-pre-wrap">
                       {st.detail}

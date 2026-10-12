@@ -107,7 +107,7 @@ export const lpContent: LPData = {
         imageClassName: 'w-full h-auto md:w-auto md:h-[261px]'
       }
     ],
-    closingText: '他では絶対に手に入らない非売品の4大特典を受け取るためにも、まずはお気軽にお申し込みください。'
+    closingText: '他では絶対に手に入らない非売品の4大特典は【個別戦略会議】のご案内と合わせて、専用LINEにてお渡ししています。\n\n今すぐこちらから専用LINEにご登録して、特典をお受け取りください！'
   },
   applicationMethodSection: {
     title: '【無料】個別作戦会議＆説明会の\nお申し込み方法',
@@ -115,6 +115,7 @@ export const lpContent: LPData = {
       {
         step: 'STEP1',
         title: '専用LINEに友だち追加',
+        highlightText: 'ご登録後、すぐに4大特典もお受け取りいただけます！',
         detail: '（※すでに登録済みの方はそのままLINEを開いてください）',
         image: 'https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=800&q=80',
         imageAlt: '専用LINEに友だち追加のイメージ'

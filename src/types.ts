@@ -36,6 +36,7 @@ export interface LPData {
     steps: {
       step: string;
       title: string;
+      highlightText?: string;
       detail?: string;
       image?: string;
       imageAlt?: string;
@@ -73,6 +74,6 @@ export interface LPData {
     }[];
   };
   ctaButtonText: string;
-  bonusCtaButtonText: string;
+  bonusCtaButtonText?: string;
   ctaUrl?: string;
 }
